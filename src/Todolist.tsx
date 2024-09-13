@@ -1,7 +1,16 @@
-export const Todolist = () => {
+import { TasksType } from "./App";
+
+type TodolistPropsType = {
+  title: string;
+  tasks: Array<TasksType>;
+};
+
+export const Todolist = (props: TodolistPropsType) => {
+  props.tasks;
+
   return (
     <div className="Todolist">
-      <h3>What to learn</h3>
+      <h3>{props.title}</h3>
       <div>
         <input aria-label="#" type="text" />
         <button>+</button>
